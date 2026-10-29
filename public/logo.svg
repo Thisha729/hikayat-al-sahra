@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer blue ring -->
+  <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#2255a0" stroke-width="2"/>
+  <!-- Inner gradient circle -->
+  <defs>
+    <radialGradient id="bgGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#1e5cb3"/>
+      <stop offset="100%" stop-color="#0d2a5e"/>
+    </radialGradient>
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FF8C00"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="url(#bgGrad)"/>
+
+  <!-- Sun (top right area) -->
+  <circle cx="138" cy="62" r="22" fill="url(#sunGrad)" opacity="0.95"/>
+  <!-- Sun rays -->
+  <g stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" opacity="0.7">
+    <line x1="138" y1="34" x2="138" y2="28"/>
+    <line x1="157" y1="43" x2="161" y2="39"/>
+    <line x1="166" y1="62" x2="172" y2="62"/>
+    <line x1="157" y1="81" x2="161" y2="85"/>
+    <line x1="138" y1="90" x2="138" y2="96"/>
+    <line x1="119" y1="81" x2="115" y2="85"/>
+    <line x1="110" y1="62" x2="104" y2="62"/>
+    <line x1="119" y1="43" x2="115" y2="39"/>
+  </g>
+
+  <!-- Ocean / water waves -->
+  <ellipse cx="100" cy="148" rx="75" ry="18" fill="#1565c0" opacity="0.6"/>
+  <path d="M25 145 Q40 138 55 145 Q70 152 85 145 Q100 138 115 145 Q130 152 145 145 Q160 138 175 145 L175 165 Q100 172 25 165 Z" fill="#1976d2" opacity="0.5"/>
+
+  <!-- Palm tree trunk -->
+  <path d="M88 148 Q90 130 92 110 Q93 95 94 82" stroke="#5D4037" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Palm fronds -->
+  <path d="M94 82 Q80 65 65 68" stroke="#2E7D32" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M94 82 Q85 60 88 48" stroke="#388E3C" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M94 82 Q105 60 112 62" stroke="#2E7D32" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M94 82 Q108 72 118 78" stroke="#388E3C" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M94 82 Q76 78 68 85" stroke="#388E3C" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- Coconuts -->
+  <circle cx="88" cy="86" r="4" fill="#795548"/>
+  <circle cx="94" cy="83" r="3.5" fill="#6D4C41"/>
+
+  <!-- Airplane (top left, flying) -->
+  <g transform="translate(45,52) rotate(-30)">
+    <path d="M0 0 L20 -5 L22 0 L20 5 Z" fill="#E0E0E0"/>
+    <path d="M8 -5 L14 -12 L18 -8 L10 -3 Z" fill="#BDBDBD"/>
+    <path d="M8 5 L14 12 L18 8 L10 3 Z" fill="#BDBDBD"/>
+    <path d="M18 -2 L24 -4 L24 4 L18 2 Z" fill="#9E9E9E"/>
+  </g>
+
+  <!-- Orbital ring (ellipse around) -->
+  <ellipse cx="100" cy="100" r="80" ry="30" fill="none" stroke="#4FC3F7" stroke-width="2.5" stroke-dasharray="6 4" opacity="0.5" transform="rotate(-20 100 100)"/>
+
+  <!-- Company name band at bottom -->
+  <rect x="15" y="155" width="170" height="32" rx="4" fill="#0d2a5e" opacity="0.85"/>
+  <text x="100" y="167" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#FFD700" font-family="Arial, sans-serif" letter-spacing="1.5">HIKAYAT AL SAHRA</text>
+  <text x="100" y="180" text-anchor="middle" font-size="7" font-weight="600" fill="#90CAF9" font-family="Arial, sans-serif" letter-spacing="2">TOURISM</text>
+</svg>

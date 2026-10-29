@@ -1,0 +1,83 @@
+/* =====================
+   Global Reset & Base
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #0a0f1e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* =====================
+   Typography
+   ===================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =====================
+   Scrollbar
+   ===================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ece4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A84C;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8943f;
+}
+
+/* =====================
+   Selection
+   ===================== */
+::selection {
+  background: rgba(201, 168, 76, 0.25);
+  color: #0a0f1e;
+}
+
+/* =====================
+   Focus Outline
+   ===================== */
+:focus-visible {
+  outline: 2px solid #C9A84C;
+  outline-offset: 2px;
+}

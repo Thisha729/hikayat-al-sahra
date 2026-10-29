@@ -1,0 +1,10 @@
+IMPORTANT: Place your Hikayat Al Sahra logo image here as "logo.png"
+The file should be saved at: public/logo.png
+
+Steps:
+1. Right-click the logo image in the chat
+2. Save it as "logo.png"  
+3. Copy it into this "public" folder
+4. The website will automatically show it in the navbar
+
+The logo will appear in the top-left of the navigation bar.
