@@ -140,7 +140,6 @@ const Navbar = () => {
                 >
                   <span className="navbar__link-label">{link.label}</span>
                   <span className="navbar__link-bar" />
-                  {isActive && <span className="navbar__link-dot" />}
                 </a>
               </li>
             )
@@ -178,9 +177,7 @@ const Navbar = () => {
             style={{ animationDelay: `${i * 0.05}s` }}
             onClick={() => setMenuOpen(false)}
           >
-            <span className="navbar__mobile-icon">{link.icon}</span>
             <span>{link.label}</span>
-            {activeLink === link.href && <span className="navbar__mobile-active-dot">●</span>}
           </a>
         ))}
         <a href="#contact" className="navbar__cta navbar__cta--mobile"
