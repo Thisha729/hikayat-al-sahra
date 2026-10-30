@@ -409,11 +409,11 @@
   .navbar__hamburger                     { display: none; }
   .navbar__mobile                        { display: none !important; }
 
-  /* Center logo in navbar */
+  /* Logo left side */
   .navbar__container {
     padding: 0 1.25rem;
     gap: 1rem;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   /* Hide logo text — icon only */
