@@ -403,20 +403,23 @@
    RESPONSIVE
    =================================================== */
 @media (max-width: 900px) {
+  /* Hide desktop links, CTA, hamburger — bottom nav handles navigation */
   .navbar__links                         { display: none; }
   .navbar__cta:not(.navbar__cta--mobile) { display: none; }
-  .navbar__hamburger                     { display: flex; }
-  .navbar__mobile                        { display: flex; }
+  .navbar__hamburger                     { display: none; }
+  .navbar__mobile                        { display: none !important; }
 
+  /* Center logo in navbar */
   .navbar__container {
     padding: 0 1.25rem;
     gap: 1rem;
+    justify-content: center;
   }
 
-  /* Hide logo text on mobile — logo icon only */
+  /* Hide logo text — icon only */
   .navbar__logo-text { display: none; }
 
-  /* Remove any box/border/outline around logo */
+  /* Remove box/border/outline around logo */
   .navbar__logo,
   .navbar__logo-img-wrap,
   .navbar__logo-svg,
@@ -437,5 +440,4 @@
   .navbar__container  { padding: 0 1rem; }
   .navbar--top        { padding: 0.9rem 0; }
   .navbar--scrolled   { padding: 0.5rem 0; }
-  .navbar__hamburger  { padding: 5px; }
 }
