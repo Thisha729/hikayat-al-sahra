@@ -60,7 +60,7 @@ const Navbar = () => {
         <a href="#home" className="navbar__logo" aria-label="Hikayat Al Sahra – Home">
           <div className="navbar__logo-img-wrap">
             {/* Hikayat Al Sahra Tourism Logo — inline SVG, no file needed */}
-            <svg viewBox="0 0 200 175" xmlns="http://www.w3.org/2000/svg" className="navbar__logo-svg">
+            <svg viewBox="0 0 200 175" xmlns="http://www.w3.org/2000/svg" className="navbar__logo-svg" width="80" height="74">
               <defs>
                 <radialGradient id="nSky" cx="55%" cy="30%" r="70%">
                   <stop offset="0%" stopColor="#29b6f6"/>

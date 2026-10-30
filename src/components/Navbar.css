@@ -69,8 +69,8 @@
 
 .navbar__logo-img-wrap {
   position: relative;
-  width: 60px;
-  height: 56px;
+  width: 80px;
+  height: 74px;
   flex-shrink: 0;
   border: none;
   outline: none;
@@ -79,8 +79,8 @@
 }
 
 .navbar__logo-svg {
-  width: 60px;
-  height: 56px;
+  width: 80px;
+  height: 74px;
   filter: drop-shadow(0 2px 8px rgba(2, 136, 209, 0.5));
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
               filter 0.35s ease;
@@ -433,9 +433,9 @@
 }
 
 @media (max-width: 480px) {
-  .navbar__logo-img-wrap { width: 42px; height: 42px; }
-  .navbar__logo-img      { width: 42px; height: 42px; }
-  .navbar__logo-svg      { width: 42px; height: 42px; }
+  .navbar__logo-img-wrap { width: 56px; height: 52px; }
+  .navbar__logo-img      { width: 56px; height: 52px; }
+  .navbar__logo-svg      { width: 56px; height: 52px; }
 
   .navbar__container  { padding: 0 1rem; }
   .navbar--top        { padding: 0.9rem 0; }
