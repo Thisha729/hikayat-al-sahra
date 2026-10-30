@@ -397,12 +397,49 @@
    RESPONSIVE
    =================================================== */
 @media (max-width: 900px) {
-  .stats__container { grid-template-columns: 1fr; gap: 3rem; }
+  .stats__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 1.25rem;
+  }
   .stats__blob { display: none; }
+  .stats { padding: 4rem 0; }
+}
+
+@media (max-width: 600px) {
+  .stats__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+  }
+  .stats__title {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+  }
+  .stats__intro {
+    font-size: 0.88rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .stats { padding: 4.5rem 0; }
+  .stats { padding: 3.5rem 0; }
   .stats__stat-number { font-size: 2rem; }
   .stats__stat-suffix { font-size: 1.3rem; }
+  .stats__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .stats__stat {
+    padding: 1.2rem 1rem;
+  }
+  .stats__reasons {
+    gap: 0.75rem;
+  }
+  .stats__reason {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
 }

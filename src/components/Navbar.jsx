@@ -2,11 +2,11 @@ import { useState, useEffect, useRef } from 'react'
 import './Navbar.css'
 
 const navLinks = [
-  { label: 'Home',         href: '#home',         icon: '🏠' },
-  { label: 'Services',     href: '#services',     icon: '⚙️' },
-  { label: 'Destinations', href: '#destinations', icon: '✈️' },
-  { label: 'About Us',     href: '#about',        icon: '👥' },
-  { label: 'Contact',      href: '#contact',      icon: '📞' },
+  { label: 'Home',         href: '#home'         },
+  { label: 'Services',     href: '#services'     },
+  { label: 'Destinations', href: '#destinations' },
+  { label: 'About Us',     href: '#about'        },
+  { label: 'Contact',      href: '#contact'      },
 ]
 
 const Navbar = () => {
@@ -138,7 +138,6 @@ const Navbar = () => {
                   href={link.href}
                   className={`navbar__link ${isActive ? 'navbar__link--active' : ''}`}
                 >
-                  <span className="navbar__link-icon">{link.icon}</span>
                   <span className="navbar__link-label">{link.label}</span>
                   <span className="navbar__link-bar" />
                   {isActive && <span className="navbar__link-dot" />}

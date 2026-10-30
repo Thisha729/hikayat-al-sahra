@@ -133,11 +133,35 @@
   gap: 0.8rem;
 }
 
+@media (max-width: 768px) {
+  .services {
+    padding: 3.5rem 0;
+  }
+  .services__container {
+    padding: 0 1.25rem;
+  }
+  .services__header {
+    margin-bottom: 2.5rem;
+  }
+  .services__title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+  .services__desc {
+    font-size: 0.9rem;
+  }
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .services__card {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
 @media (max-width: 600px) {
   .services {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
-
   .services__grid {
     grid-template-columns: 1fr;
   }
