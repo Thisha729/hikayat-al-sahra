@@ -19,13 +19,13 @@ const LogoSVG = ({ size = 70 }) => (
         <stop offset="0%" stopColor="#0288d1"/>
         <stop offset="100%" stopColor="#01579b"/>
       </linearGradient>
-      <clipPath id="cClip">
+      <clipPath id="cClip2">
         <circle cx="100" cy="88" r="78"/>
       </clipPath>
     </defs>
     <circle cx="100" cy="88" r="82" fill="white"/>
     <circle cx="100" cy="88" r="78" fill="url(#cSky)"/>
-    <g clipPath="url(#cClip)">
+    <g clipPath="url(#cClip2)">
       <ellipse cx="100" cy="148" rx="82" ry="24" fill="url(#cWater)" opacity="0.85"/>
       <circle cx="148" cy="42" r="26" fill="url(#cSun)"/>
       <g stroke="#ffca28" strokeWidth="2.5" strokeLinecap="round" opacity="0.7">
@@ -36,14 +36,18 @@ const LogoSVG = ({ size = 70 }) => (
         <line x1="118" y1="40" x2="112" y2="38"/>
       </g>
       <ellipse cx="100" cy="88" rx="74" ry="25" fill="none" stroke="white" strokeWidth="3.5" transform="rotate(-22 100 88)" opacity="0.95"/>
+      {/* Palm trunk */}
       <path d="M92 148 Q94 128 97 108 Q98 95 100 80" stroke="#5d4037" strokeWidth="6" strokeLinecap="round" fill="none"/>
-      <path d="M100 80 Q85 62 68 66" stroke="#388e3c" strokeWidth="5" strokeLinecap="round" fill="none"/>
-      <path d="M100 80 Q92 57 95 44" stroke="#43a047" strokeWidth="5" strokeLinecap="round" fill="none"/>
+      {/* Palm fronds */}
+      <path d="M100 80 Q85 62 68 66"  stroke="#388e3c" strokeWidth="5" strokeLinecap="round" fill="none"/>
+      <path d="M100 80 Q92 57 95 44"  stroke="#43a047" strokeWidth="5" strokeLinecap="round" fill="none"/>
       <path d="M100 80 Q114 58 126 62" stroke="#388e3c" strokeWidth="5" strokeLinecap="round" fill="none"/>
       <path d="M100 80 Q116 71 128 77" stroke="#2e7d32" strokeWidth="4.5" strokeLinecap="round" fill="none"/>
-      <path d="M100 80 Q82 74 72 82" stroke="#43a047" strokeWidth="4" strokeLinecap="round" fill="none"/>
+      <path d="M100 80 Q82 74 72 82"  stroke="#43a047" strokeWidth="4" strokeLinecap="round" fill="none"/>
+      {/* Coconuts */}
       <circle cx="94" cy="84" r="4.5" fill="#795548"/>
       <circle cx="101" cy="81" r="4" fill="#6d4c41"/>
+      {/* Airplane */}
       <g transform="translate(44,46) rotate(-30)">
         <ellipse cx="0" cy="0" rx="18" ry="5" fill="white"/>
         <path d="M-3 0 L7-13 L13-8 L3 0Z" fill="white"/>
