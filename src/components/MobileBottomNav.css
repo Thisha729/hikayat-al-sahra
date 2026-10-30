@@ -1,0 +1,109 @@
+/* =====================================================
+   MOBILE BOTTOM NAVIGATION BAR
+   Only visible on mobile (≤ 900px)
+   ===================================================== */
+.mobile-bottom-nav {
+  display: none; /* hidden on desktop */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(8, 12, 28, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(201, 168, 76, 0.18);
+  padding: 0.4rem 0 calc(0.4rem + env(safe-area-inset-bottom));
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.4rem 0.75rem;
+  border-radius: 12px;
+  position: relative;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  min-width: 52px;
+}
+
+.mobile-bottom-nav__item:hover {
+  color: #C9A84C;
+  background: rgba(201, 168, 76, 0.08);
+}
+
+.mobile-bottom-nav__item--active {
+  color: #C9A84C;
+}
+
+.mobile-bottom-nav__item--active .mobile-bottom-nav__icon {
+  transform: translateY(-3px) scale(1.1);
+}
+
+.mobile-bottom-nav__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mobile-bottom-nav__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.mobile-bottom-nav__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+/* Active indicator dot at top */
+.mobile-bottom-nav__indicator {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: #C9A84C;
+  border-radius: 50%;
+  animation: indicatorPulse 2s ease infinite;
+}
+
+@keyframes indicatorPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.7); }
+  50%       { box-shadow: 0 0 0 4px rgba(201, 168, 76, 0); }
+}
+
+/* ── Show only on mobile ── */
+@media (max-width: 900px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  /* Add padding to main so content isn't hidden behind bottom nav */
+  body {
+    padding-bottom: 68px;
+  }
+}
+
+@media (max-width: 380px) {
+  .mobile-bottom-nav__item {
+    padding: 0.4rem 0.5rem;
+    min-width: 44px;
+  }
+
+  .mobile-bottom-nav__label {
+    font-size: 0.55rem;
+  }
+}

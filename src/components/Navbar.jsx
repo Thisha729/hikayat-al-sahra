@@ -59,39 +59,69 @@ const Navbar = () => {
         {/* ── Logo ── */}
         <a href="#home" className="navbar__logo" aria-label="Hikayat Al Sahra – Home">
           <div className="navbar__logo-img-wrap">
-            <img
-              src="/logo.svg"
-              alt="Hikayat Al Sahra Tourism"
-              className="navbar__logo-img"
-              onError={(e) => {
-                e.target.style.display = 'none'
-                e.target.nextElementSibling.style.display = 'flex'
-              }}
-            />
-            {/* SVG fallback */}
-            <div className="navbar__logo-fallback">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="22" fill="#0a1628" stroke="#C9A84C" strokeWidth="2"/>
-                <circle cx="24" cy="24" r="18" fill="none" stroke="rgba(201,168,76,0.25)" strokeWidth="1"/>
-                {/* Palm tree */}
-                <line x1="24" y1="36" x2="24" y2="20" stroke="#C9A84C" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M24 22 Q18 16 14 18 Q18 22 24 22Z" fill="#C9A84C" opacity="0.9"/>
-                <path d="M24 22 Q30 15 34 17 Q30 22 24 22Z" fill="#C9A84C" opacity="0.9"/>
-                <path d="M24 25 Q20 20 16 21 Q20 26 24 25Z" fill="#C9A84C" opacity="0.7"/>
-                {/* Plane */}
-                <path d="M28 16 L36 12 L34 16 L36 20 Z" fill="#e0bf6a"/>
-                <path d="M30 15 L28 20 L32 19 Z" fill="#e0bf6a" opacity="0.7"/>
+            {/* Hikayat Al Sahra Tourism Logo — inline SVG, no file needed */}
+            <svg viewBox="0 0 200 175" xmlns="http://www.w3.org/2000/svg" className="navbar__logo-svg">
+              <defs>
+                <radialGradient id="nSky" cx="55%" cy="30%" r="70%">
+                  <stop offset="0%" stopColor="#29b6f6"/>
+                  <stop offset="60%" stopColor="#0288d1"/>
+                  <stop offset="100%" stopColor="#01579b"/>
+                </radialGradient>
+                <radialGradient id="nSun" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#fff176"/>
+                  <stop offset="50%" stopColor="#ffca28"/>
+                  <stop offset="100%" stopColor="#ff8f00"/>
+                </radialGradient>
+                <linearGradient id="nWater" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#0288d1"/>
+                  <stop offset="100%" stopColor="#01579b"/>
+                </linearGradient>
+                <clipPath id="nClip">
+                  <circle cx="100" cy="88" r="78"/>
+                </clipPath>
+              </defs>
+              {/* White border ring */}
+              <circle cx="100" cy="88" r="82" fill="white"/>
+              {/* Sky background */}
+              <circle cx="100" cy="88" r="78" fill="url(#nSky)"/>
+              {/* Clipped content */}
+              <g clipPath="url(#nClip)">
+                {/* Water */}
+                <ellipse cx="100" cy="148" rx="82" ry="24" fill="url(#nWater)" opacity="0.85"/>
                 {/* Sun */}
-                <circle cx="34" cy="16" r="3" fill="#e0bf6a" opacity="0.6"/>
-                {/* Ground / sand */}
-                <ellipse cx="24" cy="36" rx="8" ry="2" fill="#C9A84C" opacity="0.3"/>
-                {/* Company initial */}
-                <text x="24" y="44" textAnchor="middle" fontSize="5" fontWeight="bold"
-                  fill="#C9A84C" fontFamily="serif" letterSpacing="0.5">LLC</text>
-              </svg>
-            </div>
+                <circle cx="148" cy="42" r="26" fill="url(#nSun)"/>
+                <g stroke="#ffca28" strokeWidth="2.5" strokeLinecap="round" opacity="0.7">
+                  <line x1="148" y1="10" x2="148" y2="4"/>
+                  <line x1="168" y1="20" x2="173" y2="15"/>
+                  <line x1="178" y1="40" x2="184" y2="38"/>
+                  <line x1="128" y1="20" x2="123" y2="15"/>
+                  <line x1="118" y1="40" x2="112" y2="38"/>
+                </g>
+                {/* Orbital swoosh */}
+                <ellipse cx="100" cy="88" rx="74" ry="25" fill="none" stroke="white" strokeWidth="3.5" transform="rotate(-22 100 88)" opacity="0.95"/>
+                {/* Palm trunk */}
+                <path d="M92 148 Q94 128 97 108 Q98 95 100 80" stroke="#5d4037" strokeWidth="6" strokeLinecap="round" fill="none"/>
+                {/* Palm fronds */}
+                <path d="M100 80 Q85 62 68 66" stroke="#388e3c" strokeWidth="5" strokeLinecap="round" fill="none"/>
+                <path d="M100 80 Q92 57 95 44" stroke="#43a047" strokeWidth="5" strokeLinecap="round" fill="none"/>
+                <path d="M100 80 Q114 58 126 62" stroke="#388e3c" strokeWidth="5" strokeLinecap="round" fill="none"/>
+                <path d="M100 80 Q116 71 128 77" stroke="#2e7d32" strokeWidth="4.5" strokeLinecap="round" fill="none"/>
+                <path d="M100 80 Q82 74 72 82" stroke="#43a047" strokeWidth="4" strokeLinecap="round" fill="none"/>
+                {/* Coconuts */}
+                <circle cx="94" cy="84" r="4.5" fill="#795548"/>
+                <circle cx="101" cy="81" r="4" fill="#6d4c41"/>
+                {/* Airplane */}
+                <g transform="translate(44,46) rotate(-30)">
+                  <ellipse cx="0" cy="0" rx="18" ry="5" fill="white"/>
+                  <path d="M-3 0 L7-13 L13-8 L3 0Z" fill="white"/>
+                  <path d="M-3 0 L7 13 L13 8 L3 0Z" fill="#e0e0e0"/>
+                  <path d="M-13 0 L-18-7 L-14 0Z" fill="white"/>
+                </g>
+              </g>
+              {/* Border */}
+              <circle cx="100" cy="88" r="82" fill="none" stroke="white" strokeWidth="4"/>
+            </svg>
           </div>
-
           <div className="navbar__logo-text">
             <span className="navbar__logo-main">Hikayat Al Sahra</span>
             <span className="navbar__logo-sub">Tourism LLC</span>

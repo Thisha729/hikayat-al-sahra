@@ -1,6 +1,60 @@
 import { useEffect, useRef, useState } from 'react'
 import './CTA.css'
 
+/* ── Shared Logo SVG component ── */
+const LogoSVG = ({ size = 70 }) => (
+  <svg viewBox="0 0 200 175" xmlns="http://www.w3.org/2000/svg" width={size} height={size} style={{ display: 'block' }}>
+    <defs>
+      <radialGradient id="cSky" cx="55%" cy="30%" r="70%">
+        <stop offset="0%" stopColor="#29b6f6"/>
+        <stop offset="60%" stopColor="#0288d1"/>
+        <stop offset="100%" stopColor="#01579b"/>
+      </radialGradient>
+      <radialGradient id="cSun" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="#fff176"/>
+        <stop offset="50%" stopColor="#ffca28"/>
+        <stop offset="100%" stopColor="#ff8f00"/>
+      </radialGradient>
+      <linearGradient id="cWater" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#0288d1"/>
+        <stop offset="100%" stopColor="#01579b"/>
+      </linearGradient>
+      <clipPath id="cClip">
+        <circle cx="100" cy="88" r="78"/>
+      </clipPath>
+    </defs>
+    <circle cx="100" cy="88" r="82" fill="white"/>
+    <circle cx="100" cy="88" r="78" fill="url(#cSky)"/>
+    <g clipPath="url(#cClip)">
+      <ellipse cx="100" cy="148" rx="82" ry="24" fill="url(#cWater)" opacity="0.85"/>
+      <circle cx="148" cy="42" r="26" fill="url(#cSun)"/>
+      <g stroke="#ffca28" strokeWidth="2.5" strokeLinecap="round" opacity="0.7">
+        <line x1="148" y1="10" x2="148" y2="4"/>
+        <line x1="168" y1="20" x2="173" y2="15"/>
+        <line x1="178" y1="40" x2="184" y2="38"/>
+        <line x1="128" y1="20" x2="123" y2="15"/>
+        <line x1="118" y1="40" x2="112" y2="38"/>
+      </g>
+      <ellipse cx="100" cy="88" rx="74" ry="25" fill="none" stroke="white" strokeWidth="3.5" transform="rotate(-22 100 88)" opacity="0.95"/>
+      <path d="M92 148 Q94 128 97 108 Q98 95 100 80" stroke="#5d4037" strokeWidth="6" strokeLinecap="round" fill="none"/>
+      <path d="M100 80 Q85 62 68 66" stroke="#388e3c" strokeWidth="5" strokeLinecap="round" fill="none"/>
+      <path d="M100 80 Q92 57 95 44" stroke="#43a047" strokeWidth="5" strokeLinecap="round" fill="none"/>
+      <path d="M100 80 Q114 58 126 62" stroke="#388e3c" strokeWidth="5" strokeLinecap="round" fill="none"/>
+      <path d="M100 80 Q116 71 128 77" stroke="#2e7d32" strokeWidth="4.5" strokeLinecap="round" fill="none"/>
+      <path d="M100 80 Q82 74 72 82" stroke="#43a047" strokeWidth="4" strokeLinecap="round" fill="none"/>
+      <circle cx="94" cy="84" r="4.5" fill="#795548"/>
+      <circle cx="101" cy="81" r="4" fill="#6d4c41"/>
+      <g transform="translate(44,46) rotate(-30)">
+        <ellipse cx="0" cy="0" rx="18" ry="5" fill="white"/>
+        <path d="M-3 0 L7-13 L13-8 L3 0Z" fill="white"/>
+        <path d="M-3 0 L7 13 L13 8 L3 0Z" fill="#e0e0e0"/>
+        <path d="M-13 0 L-18-7 L-14 0Z" fill="white"/>
+      </g>
+    </g>
+    <circle cx="100" cy="88" r="82" fill="none" stroke="white" strokeWidth="4"/>
+  </svg>
+)
+
 /* ── Intersection helper: adds 'is-visible' when element enters view ── */
 function useReveal() {
   const ref = useRef(null)
@@ -134,7 +188,10 @@ const CTA = () => {
             ref={officeRef}
             className={`cta__office reveal reveal--left ${officeVisible ? 'reveal--visible' : ''}`}
           >
-            <h3 className="cta__office-title">Office Details</h3>
+            <div className="cta__office-logo-row">
+              <LogoSVG size={72} />
+              <h3 className="cta__office-title">Office Details</h3>
+            </div>
 
             <div className="cta__office-grid">
               {officeItems.map((item, i) => (

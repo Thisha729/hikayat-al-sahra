@@ -7,6 +7,7 @@ import About from './components/About'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
+import MobileBottomNav from './components/MobileBottomNav'
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
+      {/* Bottom nav — visible only on mobile (≤900px) */}
+      <MobileBottomNav />
     </>
   )
 }
