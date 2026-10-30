@@ -40,6 +40,13 @@ a {
 img {
   display: block;
   max-width: 100%;
+  border: none;
+  outline: none;
+}
+
+svg {
+  border: none;
+  outline: none;
 }
 
 button {

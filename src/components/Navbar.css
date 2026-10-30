@@ -63,6 +63,8 @@
   gap: 0.75rem;
   text-decoration: none;
   flex-shrink: 0;
+  border: none;
+  outline: none;
 }
 
 .navbar__logo-img-wrap {
@@ -70,6 +72,10 @@
   width: 60px;
   height: 56px;
   flex-shrink: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  overflow: hidden;
 }
 
 .navbar__logo-svg {
@@ -406,19 +412,30 @@
     padding: 0 1.25rem;
     gap: 1rem;
   }
+
+  /* Hide logo text on mobile — logo icon only */
+  .navbar__logo-text { display: none; }
+
+  /* Remove any box/border/outline around logo */
+  .navbar__logo,
+  .navbar__logo-img-wrap,
+  .navbar__logo-svg,
+  .navbar__logo-img {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @media (max-width: 480px) {
-  .navbar__logo-text  { display: none; }
+  .navbar__logo-img-wrap { width: 42px; height: 42px; }
+  .navbar__logo-img      { width: 42px; height: 42px; }
+  .navbar__logo-svg      { width: 42px; height: 42px; }
 
-  .navbar__logo-img-wrap { width: 44px; height: 44px; }
-  .navbar__logo-img      { width: 44px; height: 44px; }
-  .navbar__logo-svg      { width: 44px; height: 44px; }
-
-  .navbar__container { padding: 0 1rem; }
-
-  .navbar--top    { padding: 0.9rem 0; }
-  .navbar--scrolled { padding: 0.5rem 0; }
-
-  .navbar__hamburger { padding: 5px; }
+  .navbar__container  { padding: 0 1rem; }
+  .navbar--top        { padding: 0.9rem 0; }
+  .navbar--scrolled   { padding: 0.5rem 0; }
+  .navbar__hamburger  { padding: 5px; }
 }
