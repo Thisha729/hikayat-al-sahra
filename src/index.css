@@ -88,3 +88,19 @@ button {
   outline: 2px solid #C9A84C;
   outline-offset: 2px;
 }
+
+/* Remove focus outline from logo and nav links */
+.navbar__logo:focus,
+.navbar__logo:focus-visible,
+.navbar__logo-img-wrap:focus,
+.navbar__logo-img-wrap:focus-visible,
+.navbar__link:focus-visible,
+.navbar__cta:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove orange tap highlight on mobile (iOS/Android) */
+a, button, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
